@@ -9,7 +9,13 @@ int number = Convert.ToInt32(Console.ReadLine());
 if(number < 0) number = -number;
 
 Console.Write($"{number} -> \"");
-for(int count=-number;count<number;count++){
+
+int count = -number;
+while(count < number){
     Console.Write($"{count}, ");
+    count++;
 }
+// for(int count=-number;count<number;count++){
+//     Console.Write($"{count}, ");
+// }
 Console.WriteLine($"{number}\"");
