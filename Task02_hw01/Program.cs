@@ -7,9 +7,9 @@
 
 int a, b, max;
 
-Console.Write("Input first number a = ");
+Console.Write("Input number a = ");
 a = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input first number b = ");
+Console.Write("Input number b = ");
 b = Convert.ToInt32(Console.ReadLine());
 
 if(a > b) max = a;
