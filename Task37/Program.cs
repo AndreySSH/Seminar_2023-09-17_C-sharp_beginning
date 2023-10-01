@@ -30,14 +30,14 @@ void PrintArray(int[] arr, bool brackets)
 
 int[] ArrayProdBeginToEnd(int[] arr)
 {
-    int sizeNewArr = arr.Length / 2;
+    int sizeNewArr = arr.Length / 2 + arr.Length % 2;
     int[] arrNew = new int[sizeNewArr];
     
     for(int i = 0; i < sizeNewArr; i++)
     {
         arrNew[i] = arr[i] * arr[arr.Length - 1 - i];
     }
-
+    if(arr.Length % 2 == 1) arrNew[sizeNewArr - 1] = arr[sizeNewArr - 1];
     return arrNew;
 }
 
