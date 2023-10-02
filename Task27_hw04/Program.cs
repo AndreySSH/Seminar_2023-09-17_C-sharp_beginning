@@ -15,8 +15,7 @@ int SumOfNumberDigits(int num)
     int result = 0;
     while(num != 0)
     {
-        int temp = num % 10;
-        result += temp;
+        result += num % 10;
         num /= 10;
     }
     return result;
