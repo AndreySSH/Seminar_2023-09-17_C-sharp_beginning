@@ -4,7 +4,6 @@
 // 3 -> 11
 // 2 -> 10
 
-
 int Prompt(string message)
 {
     Console.Write(message);
@@ -33,10 +32,22 @@ int ConvertDecToBinRecursion(int dec)
     }
 }
 
+int ConvertDecToBinString(int dec)
+{
+    string result = "";
+    while(dec > 0)
+    {
+        result = (dec % 2) + result;
+        dec /= 2;
+    }
+    return Convert.ToInt32(result);
+}
+
 int number = Prompt("Input number: ");
 // int number = new Random.Next(0, 127 + 1);
 
 // int result = ConvertDecToBin(number);
-int result = ConvertDecToBinRecursion(number);
+// int result = ConvertDecToBinRecursion(number);
+int result = ConvertDecToBinString(number);
 
 Console.WriteLine($"{number} -> {result}");
