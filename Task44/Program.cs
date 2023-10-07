@@ -23,7 +23,6 @@ void PrintArray(int[] arr, bool brackets)
 
 int[] Fibonacci(int num)
 {
-    if(num == 1) num = 2;
     int[] result = new int[num];
     result[1] = 1;
     if(num > 2)
@@ -38,6 +37,7 @@ int[] Fibonacci(int num)
 
 
 int number = Prompt("Input number: ");
+if(number == 1) return;
 
 int[] fib = Fibonacci(number);
 
