@@ -16,6 +16,26 @@
 
 internal class Program
 {
+    private static int Prompt(string message)
+    {
+        Console.Write(message);
+        return Convert.ToInt32(Console.ReadLine());
+    }
+
+    private static int[,] Generate2DArray(int min, int max, int sizeM, int sizeN)
+    {
+        int[,] arr = new int[sizeM, sizeN];
+        var rnd = new Random();
+
+        for(int i = 0; i < sizeM; i++)
+        {
+            for(int j = 0; j < sizeN; j++)
+            {
+                arr[i, j] = rnd.Next(min, max + 1);
+            }
+        }
+        return arr;
+    }
     private static void Print2DArray(int[,] arr, bool brackets)
     {
         for (int i = 0; i < arr.GetLength(0); i++)
@@ -45,12 +65,18 @@ internal class Program
 
     private static void Main(string[] args)
     {
-        int[,] array = new int[,]
-        {
-            {1, 4, 7, 2},
-            {5, 9, 2, 3},
-            {8, 4, 2, 4},
-        };
+        // int[,] array = new int[,]
+        // {
+        //     {1, 4, 7, 2},
+        //     {5, 9, 2, 3},
+        //     {8, 4, 2, 4},
+        // };
+
+        int m = Prompt("Input rows number m: ");
+        int n = Prompt("Input columns number n: ");
+
+        int[,] array = Generate2DArray(0, 10, m, n);
+
         Console.WriteLine("Original array:");
         Print2DArray(array, brackets: true);
 
