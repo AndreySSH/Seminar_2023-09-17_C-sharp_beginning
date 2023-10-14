@@ -10,7 +10,7 @@ string QuaterToCoords(int quadr)
     if(quadr == 2) return "x < 0, y > 0";
     if(quadr == 3) return "x < 0, y < 0";
     if(quadr == 4) return "x > 0, y < 0";
-    return null;
+    return String.Empty;
 }
 
 Console.WriteLine("Input quater");
@@ -20,4 +20,4 @@ int quater = Convert.ToInt32(Console.ReadLine());
 
 string result = QuaterToCoords(quater);
 
-Console.WriteLine((result != null) ? result : "user did not input quater number");
+Console.WriteLine((result != String.Empty) ? result : "user did not input quater number");
