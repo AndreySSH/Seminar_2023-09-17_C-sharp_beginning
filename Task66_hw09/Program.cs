@@ -15,6 +15,6 @@ Console.Write("Input first natural number: ");
 int numberM = Convert.ToInt32(Console.ReadLine());
 Console.Write("Input second natural number: ");
 int numberN = Convert.ToInt32(Console.ReadLine());
-int result = PrintSumOfNaturalNumbersRange(numberN, numberM);
+int result = PrintSumOfNaturalNumbersRange(numberM, numberN);
 
 Console.WriteLine($"M = {numberM}; N = {numberN} -> {result}");
