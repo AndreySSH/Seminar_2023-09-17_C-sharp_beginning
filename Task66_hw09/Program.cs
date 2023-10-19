@@ -6,18 +6,9 @@
 
 int PrintSumOfNaturalNumbersRange(int m, int n)
 {
-    if(m < n)
-    {
-        return n + PrintSumOfNaturalNumbersRange(m, n - 1);
-    }
-    else if (m > n)
-    {
-        return n + PrintSumOfNaturalNumbersRange(m, n + 1);
-    }
-    else
-    {
-        return n;
-    }
+    if(m < n)       return n + PrintSumOfNaturalNumbersRange(m, n - 1);
+    else if (m > n) return n + PrintSumOfNaturalNumbersRange(m, n + 1);
+    else            return n;
 }
 
 Console.Write("Input first natural number: ");
